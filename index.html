@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohit Mandloi - Business Analytics Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; }
+        header { background: #007bff; color: white; text-align: center; padding: 50px 20px; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header p { margin: 10px 0; font-size: 1.2em; }
+        section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+        h2 { color: #007bff; }
+        .project { background: white; padding: 20px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .project-screenshots img { margin-top: 10px; border-radius: 5px; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .skills { display: flex; flex-wrap: wrap; margin-top: 10px; }
+        .skill { background: #007bff; color: white; padding: 5px 10px; margin: 5px; border-radius: 5px; font-size: 0.9em; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
 </head>
 <body>
     <!-- Header / Hero Section -->
@@ -18,18 +33,40 @@
     <section id="about">
         <h2>About Me</h2>
         <p>I have a strong engineering background (B.E. & M.E.) and a Master's in Business Analytics. Experienced as a Production Manager and Technical Recruiter. Skilled in Python, Streamlit, Data Visualization, and Data Analytics.</p>
+        
+        <!-- Skills badges -->
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">Streamlit</div>
+            <div class="skill">Plotly</div>
+            <div class="skill">Excel</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Data Analytics</div>
+            <div class="skill">Machine Learning</div>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Smart Factory Dashboard</h3>
-            <p>An end-to-end analytics platform for Sales, Production, and Recruitment using Python, Streamlit, and Plotly.</p>
-            <a href="https://mmandloi1501-streamlit-smart-factory-app.streamlit.app" target="_blank" style="font-weight:bold; color:#007bff;">View Live Dashboard</a>
+ <section id="projects">
+    <h2>Projects</h2>
 
-        </div>
-    </section>
+    <!-- Smart Factory Dashboard Project -->
+    <div class="project">
+        <h3>Smart Factory Dashboard</h3>
+        <p>An end-to-end analytics platform for Sales, Production, and Recruitment using Python, Streamlit, and Plotly.</p>
+
+        <!-- Button to open live dashboard -->
+        <p>
+            <a href="https://mmandloi1501-streamlit-smart-factory-app.streamlit.app" target="_blank" 
+               style="font-weight:bold; color:#007bff; text-decoration:underline;">
+               Click here to view the live dashboard
+            </a>
+        </p>
+
+        <p><em>Note: The dashboard opens in a new tab due to Streamlit security restrictions.</em></p>
+    </div>
+</section>
 
     <!-- Resume Section -->
     <section id="resume">
