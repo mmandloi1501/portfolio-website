@@ -9,36 +9,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700&display=swap');
 
 :root {
-    --primary: #ffb703;
-    --secondary: #fb8500;
-    --bg-dark: #1b1b1b;
-    --bg-card: rgba(255,255,255,0.06);
-    --text-light: #f1f1f1;
+    --primary: #ff6f00;      /* Gulf Orange */
+    --secondary: #0077b6;    /* Gulf Blue */
+    --bg-main: #f8f9fa;      /* White */
+    --bg-card: rgba(255,255,255,0.92);
+    --text-dark: #0b2545;
 }
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, #1b1b1b, #111);
-    color: var(--text-light);
+    background: linear-gradient(180deg, #e9f2f9, #ffffff);
+    color: var(--text-dark);
 }
 
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 12px;
 }
 
 .section {
-    padding: 40px 10%;
+    padding: 28px 10%;
 }
 
 .card {
     background: var(--bg-card);
     border-radius: 18px;
-    padding: 28px;
-    margin-bottom: 24px;
-    box-shadow: 0 0 25px rgba(255,183,3,0.15);
+    padding: 26px;
+    margin-bottom: 20px;
+    box-shadow: 0 12px 35px rgba(0,119,182,0.15);
 }
 
 .btn {
@@ -47,26 +47,27 @@ h1, h2, h3 {
     margin: 6px 6px 0 0;
     border-radius: 22px;
     text-decoration: none;
-    color: #1b1b1b;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
     font-weight: 600;
-    box-shadow: 0 0 15px rgba(255,183,3,0.6);
+    box-shadow: 0 8px 20px rgba(255,111,0,0.35);
     transition: transform 0.2s;
 }
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 .tiles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 20px;
+    gap: 18px;
 }
 
 .tile {
-    background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
+    background: linear-gradient(135deg, #ffffff, #eef6fb);
     padding: 20px;
     border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: transform 0.3s;
 }
 .tile:hover {
@@ -77,31 +78,31 @@ h1, h2, h3 {
     position: fixed;
     bottom: 22px;
     right: 22px;
-    background: var(--primary);
-    color: black;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
     padding: 16px;
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 0 20px var(--primary);
+    box-shadow: 0 0 25px rgba(0,119,182,0.6);
 }
 
 .popup {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.55);
     justify-content: center;
     align-items: center;
     z-index: 10;
 }
 
 .popup-content {
-    background: #222;
+    background: white;
     padding: 32px;
     border-radius: 18px;
     max-width: 520px;
-    box-shadow: 0 0 40px var(--primary);
+    box-shadow: 0 0 40px rgba(255,111,0,0.6);
 }
 </style>
 </head>
@@ -145,8 +146,8 @@ across Tech, Finance, Retail, and Manufacturing domains.
 <div class="tile">
 <h3>E-Commerce Analytics Dashboard</h3>
 <p>
-End-to-end analytics solution covering revenue trends, AOV, customer segmentation (RFM),
-product performance, and regional sales insights using Python, Pandas, and Streamlit.
+Revenue analytics, AOV trends, customer RFM segmentation, product & regional performance
+using Python, Pandas, and Streamlit.
 </p>
 <a class="btn" href="https://ecommercedashboard-b3kc7qcdwne7kzwwf8dsze.streamlit.app/" target="_blank">Launch Dashboard</a>
 </div>
@@ -154,8 +155,8 @@ product performance, and regional sales insights using Python, Pandas, and Strea
 <div class="tile">
 <h3>Smart Factory Intelligence Platform</h3>
 <p>
-Manufacturing analytics dashboard visualizing machine efficiency, throughput,
-downtime analysis, and operational KPIs for smart factory environments.
+Manufacturing intelligence dashboard tracking machine efficiency, throughput, downtime,
+and production KPIs in a smart factory environment.
 </p>
 <a class="btn" href="https://smart-factory-platform-rnjpfwnu64rmkdapeqzou5.streamlit.app/" target="_blank">Launch Dashboard</a>
 </div>
@@ -171,18 +172,18 @@ downtime analysis, and operational KPIs for smart factory environments.
 
 <h3>Business Analyst / Technical Recruiter — LanceSoft Inc.</h3>
 <ul>
-<li>Developed analytics-driven recruitment dashboards to track pipeline efficiency, placement rates, and client fulfillment KPIs.</li>
-<li>Applied SQL-style logic and advanced Excel models to analyze candidate flow, time-to-hire, and demand forecasting.</li>
-<li>Supported enterprise clients (Aerospace, Defense, IT, Manufacturing) by translating workforce data into actionable insights.</li>
-<li>Optimized operational processes, increasing placement success by 30% and improving SLA adherence.</li>
+<li>Designed analytics-driven dashboards to monitor hiring pipelines, SLA adherence, placement velocity, and fulfillment KPIs.</li>
+<li>Applied SQL-style querying, Excel Power Models, and reporting logic to analyze demand forecasting and time-to-hire metrics.</li>
+<li>Partnered with enterprise stakeholders across Aerospace, Defense, IT, and Manufacturing to translate workforce data into insights.</li>
+<li>Improved operational efficiency and placement success rates by 30% through data-backed process optimization.</li>
 </ul>
 
 <h3>Production Manager — Tulsi Wire & Wire Nails</h3>
 <ul>
-<li>Led data-backed production planning, improving throughput by 25% while maintaining quality compliance.</li>
-<li>Analyzed machine utilization, downtime, and defect rates to drive a 20% reduction in operational losses.</li>
-<li>Implemented lean manufacturing principles and waste reduction strategies saving ~$50K annually.</li>
-<li>Collaborated with cross-functional teams on inventory control, maintenance planning, and cost optimization.</li>
+<li>Led data-driven production planning and scheduling, increasing throughput by 25% while maintaining quality standards.</li>
+<li>Analyzed machine utilization, downtime, OEE, and defect trends to reduce operational losses by 20%.</li>
+<li>Implemented lean manufacturing, waste reduction, and continuous improvement initiatives saving ~$50K annually.</li>
+<li>Collaborated on inventory optimization, preventive maintenance planning, and cost control strategies.</li>
 </ul>
 </div>
 </section>
@@ -217,9 +218,9 @@ downtime analysis, and operational KPIs for smart factory environments.
 <div class="card">
 <h2>Career Optimization Strategy</h2>
 <ul>
-<li>✔ ATS-optimized resumes for Data Analyst & Operations Analyst roles</li>
-<li>✔ LinkedIn profile engineered for recruiter search algorithms</li>
-<li>✔ Portfolio aligned with real-world business problems & KPIs</li>
+<li>✔ ATS-optimized resumes (Data Analyst & Operations Analyst)</li>
+<li>✔ LinkedIn profile engineered for recruiter keyword searches</li>
+<li>✔ Portfolio mapped to real-world KPIs & business problems</li>
 </ul>
 </div>
 </section>
