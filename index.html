@@ -1,90 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohit Mandloi - Business Analytics Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; }
-        header { background: #007bff; color: white; text-align: center; padding: 50px 20px; }
-        header h1 { margin: 0; font-size: 2.5em; }
-        header p { margin: 10px 0; font-size: 1.2em; }
-        section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        h2 { color: #007bff; }
-        .project { background: white; padding: 20px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .project-screenshots img { margin-top: 10px; border-radius: 5px; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .skills { display: flex; flex-wrap: wrap; margin-top: 10px; }
-        .skill { background: #007bff; color: white; padding: 5px 10px; margin: 5px; border-radius: 5px; font-size: 0.9em; }
-        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-    </style>
+<meta charset="UTF-8">
+<title>Mohit Mandloi | Analytics & Operations Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700&display=swap');
+
+:root {
+    --primary: #ffb703;
+    --secondary: #fb8500;
+    --bg-dark: #1b1b1b;
+    --bg-card: rgba(255,255,255,0.06);
+    --text-light: #f1f1f1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #1b1b1b, #111);
+    color: var(--text-light);
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.section {
+    padding: 40px 10%;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 0 25px rgba(255,183,3,0.15);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 6px 6px 0 0;
+    border-radius: 22px;
+    text-decoration: none;
+    color: #1b1b1b;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(255,183,3,0.6);
+    transition: transform 0.2s;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 20px;
+}
+
+.tile {
+    background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
+    padding: 20px;
+    border-radius: 14px;
+    transition: transform 0.3s;
+}
+.tile:hover {
+    transform: translateY(-6px);
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: var(--primary);
+    color: black;
+    padding: 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background: #222;
+    padding: 32px;
+    border-radius: 18px;
+    max-width: 520px;
+    box-shadow: 0 0 40px var(--primary);
+}
+</style>
 </head>
+
 <body>
-    <!-- Header / Hero Section -->
-    <header>
-        <h1>Mohit Mandloi</h1>
-        <p>Business Analytics & Operations Professional</p>
-        <p>Transforming data into actionable insights</p>
-    </header>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I have a strong engineering background (B.E. & M.E.) and a Master's in Business Analytics. Experienced as a Production Manager and Technical Recruiter. Skilled in Python, Streamlit, Data Visualization, and Data Analytics.</p>
-        
-        <!-- Skills badges -->
-        <div class="skills">
-            <div class="skill">Python</div>
-            <div class="skill">Streamlit</div>
-            <div class="skill">Plotly</div>
-            <div class="skill">Excel</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Data Analytics</div>
-            <div class="skill">Machine Learning</div>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="section">
+<div class="card">
+<h1>Mohit Mandloi</h1>
+<p><b>Data / Business Analyst • Operations & Manufacturing Analyst</b></p>
+<p>
+Analytics-focused professional with a strong engineering foundation, specializing in
+<b>data-driven decision-making, operational intelligence, and performance optimization</b>
+across Tech, Finance, Retail, and Manufacturing domains.
+</p>
 
-    <!-- Projects Section -->
- <section id="projects">
-    <h2>Projects</h2>
-
-    <!-- Smart Factory Dashboard Project -->
-    <div class="project">
-        <h3>Smart Factory Dashboard</h3>
-        <p>An end-to-end analytics platform for Sales, Production, and Recruitment using Python, Streamlit, and Plotly.</p>
-
-        <!-- Button to open live dashboard -->
-        <p>
-            <a href="https://smart-factory-platform-rnjpfwnu64rmkdapeqzou5.streamlit.app/" target="_blank" 
-               style="font-weight:bold; color:#007bff; text-decoration:underline;">
-               Click here to view the live dashboard
-            </a>
-        </p>
-
-        <p><em>Note: The dashboard opens in a new tab due to Streamlit security restrictions.</em></p>
-    </div>
+<a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+<a class="btn" href="https://github.com/mmandloi1501" target="_blank">GitHub</a>
+</div>
 </section>
 
-    <!-- Resume Section -->
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="MM_FF.pdf" target="_blank">Download My Resume (PDF)</a>
-    </section>
+<!-- TARGET ROLES -->
+<section class="section">
+<div class="card">
+<h2>Target Roles</h2>
+<div class="tiles">
+<div class="tile">📊 <b>Data / Business Analyst</b><br>Python • SQL • BI • Finance • Retail</div>
+<div class="tile">📦 <b>Operations / Supply Chain Analyst</b><br>KPIs • Forecasting • Process Optimization</div>
+<div class="tile">🏭 <b>Production / Manufacturing Engineer → Manager</b><br>Lean • Six Sigma • OEE</div>
+</div>
+</div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mmandloi1501@gmail.com">mmandloi1501@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/mohit-mandloi/" target="_blank">Profile</a></p>
-        <p>GitHub: <a href="https://github.com/mmandloi1501" target="_blank">Portfolio</a></p>
-    </section>
+<!-- PROJECTS -->
+<section class="section">
+<div class="card">
+<h2>Live Analytics Projects</h2>
+<div class="tiles">
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Mohit Mandloi. All rights reserved.</p>
-    </footer>
+<div class="tile">
+<h3>E-Commerce Analytics Dashboard</h3>
+<p>
+End-to-end analytics solution covering revenue trends, AOV, customer segmentation (RFM),
+product performance, and regional sales insights using Python, Pandas, and Streamlit.
+</p>
+<a class="btn" href="https://ecommercedashboard-b3kc7qcdwne7kzwwf8dsze.streamlit.app/" target="_blank">Launch Dashboard</a>
+</div>
+
+<div class="tile">
+<h3>Smart Factory Intelligence Platform</h3>
+<p>
+Manufacturing analytics dashboard visualizing machine efficiency, throughput,
+downtime analysis, and operational KPIs for smart factory environments.
+</p>
+<a class="btn" href="https://smart-factory-platform-rnjpfwnu64rmkdapeqzou5.streamlit.app/" target="_blank">Launch Dashboard</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section">
+<div class="card">
+<h2>Professional Experience</h2>
+
+<h3>Business Analyst / Technical Recruiter — LanceSoft Inc.</h3>
+<ul>
+<li>Developed analytics-driven recruitment dashboards to track pipeline efficiency, placement rates, and client fulfillment KPIs.</li>
+<li>Applied SQL-style logic and advanced Excel models to analyze candidate flow, time-to-hire, and demand forecasting.</li>
+<li>Supported enterprise clients (Aerospace, Defense, IT, Manufacturing) by translating workforce data into actionable insights.</li>
+<li>Optimized operational processes, increasing placement success by 30% and improving SLA adherence.</li>
+</ul>
+
+<h3>Production Manager — Tulsi Wire & Wire Nails</h3>
+<ul>
+<li>Led data-backed production planning, improving throughput by 25% while maintaining quality compliance.</li>
+<li>Analyzed machine utilization, downtime, and defect rates to drive a 20% reduction in operational losses.</li>
+<li>Implemented lean manufacturing principles and waste reduction strategies saving ~$50K annually.</li>
+<li>Collaborated with cross-functional teams on inventory control, maintenance planning, and cost optimization.</li>
+</ul>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section">
+<div class="card">
+<h2>Education</h2>
+<ul>
+<li><b>MSc Business Analytics</b> — Technological University of Shannon</li>
+<li><b>MEng Production Engineering & Design</b></li>
+<li><b>BEng Mechanical Engineering</b></li>
+</ul>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section">
+<div class="card">
+<h2>Certifications & Tools</h2>
+<ul>
+<li>SQL • MySQL • Database Management</li>
+<li>Python • Pandas • Streamlit • R</li>
+<li>Advanced Excel • VBA • Power BI</li>
+<li>Operations Analytics • KPI Design • Forecasting</li>
+</ul>
+</div>
+</section>
+
+<!-- CAREER STRATEGY -->
+<section class="section">
+<div class="card">
+<h2>Career Optimization Strategy</h2>
+<ul>
+<li>✔ ATS-optimized resumes for Data Analyst & Operations Analyst roles</li>
+<li>✔ LinkedIn profile engineered for recruiter search algorithms</li>
+<li>✔ Portfolio aligned with real-world business problems & KPIs</li>
+</ul>
+</div>
+</section>
+
+<!-- POPUP -->
+<div class="floating-btn" onclick="openPopup()">⭐</div>
+
+<div class="popup" id="popup">
+<div class="popup-content">
+<h2>Recruiter Snapshot</h2>
+<p>
+Roles: Data / Business / Operations Analyst<br>
+Tools: Python, SQL, BI, Streamlit, Excel<br>
+Industries: Tech, Retail, Finance, Manufacturing
+</p>
+<a class="btn" href="#" onclick="closePopup()">Close</a>
+</div>
+</div>
+
+<script>
+function openPopup() {
+    document.getElementById('popup').style.display = 'flex';
+}
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+</script>
+
 </body>
 </html>
