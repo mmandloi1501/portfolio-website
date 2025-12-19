@@ -9,36 +9,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700&display=swap');
 
 :root {
-    --primary: #ff6f00;      /* Gulf Orange */
-    --secondary: #0077b6;    /* Gulf Blue */
-    --bg-main: #f8f9fa;      /* White */
-    --bg-card: rgba(255,255,255,0.92);
-    --text-dark: #0b2545;
+    --primary: #0077c8; /* Gulf blue */
+    --secondary: #ffffff; /* White */
+    --bg-card: #f8f8f8; /* Light background for cards */
+    --text-light: #0077c8;
 }
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, #e9f2f9, #ffffff);
-    color: var(--text-dark);
+    background: var(--secondary);
+    color: var(--text-light);
 }
 
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
-    color: var(--secondary);
-    margin-bottom: 12px;
+    color: var(--primary);
+    margin-bottom: 8px;
 }
 
 .section {
-    padding: 28px 10%;
+    padding: 30px 10%;
 }
 
 .card {
     background: var(--bg-card);
     border-radius: 18px;
-    padding: 26px;
+    padding: 24px;
     margin-bottom: 20px;
-    box-shadow: 0 12px 35px rgba(0,119,182,0.15);
+    box-shadow: 0 0 20px rgba(0,119,200,0.15);
 }
 
 .btn {
@@ -47,62 +46,68 @@ h1, h2, h3 {
     margin: 6px 6px 0 0;
     border-radius: 22px;
     text-decoration: none;
-    color: white;
-    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    color: var(--secondary);
+    background: var(--primary);
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(255,111,0,0.35);
     transition: transform 0.2s;
 }
 .btn:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
 .tiles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 18px;
+    gap: 16px;
 }
 
 .tile {
-    background: linear-gradient(135deg, #ffffff, #eef6fb);
-    padding: 20px;
+    background: var(--primary);
+    color: var(--secondary);
+    padding: 18px;
     border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: transform 0.3s;
 }
 .tile:hover {
     transform: translateY(-6px);
 }
 
+.tile p.prove {
+    font-style: italic;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
 .floating-btn {
     position: fixed;
     bottom: 22px;
     right: 22px;
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
-    color: white;
+    background: var(--primary);
+    color: var(--secondary);
     padding: 16px;
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 0 25px rgba(0,119,182,0.6);
+    box-shadow: 0 0 20px var(--primary);
 }
 
 .popup {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.85);
     justify-content: center;
     align-items: center;
     z-index: 10;
 }
 
 .popup-content {
-    background: white;
+    background: #ffffff;
+    color: var(--primary);
     padding: 32px;
     border-radius: 18px;
     max-width: 520px;
-    box-shadow: 0 0 40px rgba(255,111,0,0.6);
+    box-shadow: 0 0 40px var(--primary);
 }
 </style>
 </head>
@@ -122,6 +127,7 @@ across Tech, Finance, Retail, and Manufacturing domains.
 
 <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
 <a class="btn" href="https://github.com/mmandloi1501" target="_blank">GitHub</a>
+<a class="btn" href="MM_FF.pdf" download>Download Resume</a>
 </div>
 </section>
 
@@ -146,18 +152,20 @@ across Tech, Finance, Retail, and Manufacturing domains.
 <div class="tile">
 <h3>E-Commerce Analytics Dashboard</h3>
 <p>
-Revenue analytics, AOV trends, customer RFM segmentation, product & regional performance
-using Python, Pandas, and Streamlit.
+End-to-end analytics solution covering revenue trends, AOV, customer segmentation (RFM),
+product performance, and regional sales insights using Python, Pandas, and Streamlit.
 </p>
+<p class="prove"><b>What this proves:</b> Advanced data analytics, Python programming, data visualization, segmentation analysis, KPI monitoring, and actionable business insights.</p>
 <a class="btn" href="https://ecommercedashboard-b3kc7qcdwne7kzwwf8dsze.streamlit.app/" target="_blank">Launch Dashboard</a>
 </div>
 
 <div class="tile">
 <h3>Smart Factory Intelligence Platform</h3>
 <p>
-Manufacturing intelligence dashboard tracking machine efficiency, throughput, downtime,
-and production KPIs in a smart factory environment.
+Manufacturing analytics dashboard visualizing machine efficiency, throughput,
+downtime analysis, and operational KPIs for smart factory environments.
 </p>
+<p class="prove"><b>What this proves:</b> Manufacturing analytics, operational efficiency tracking, downtime analysis, KPI management, and performance optimization using real-time dashboards.</p>
 <a class="btn" href="https://smart-factory-platform-rnjpfwnu64rmkdapeqzou5.streamlit.app/" target="_blank">Launch Dashboard</a>
 </div>
 
@@ -170,20 +178,20 @@ and production KPIs in a smart factory environment.
 <div class="card">
 <h2>Professional Experience</h2>
 
-<h3>Business Analyst / Technical Recruiter — LanceSoft Inc.</h3>
+<h3>Technical Recruiter / Business Analyst — Lancesoft Inc. <span style="float:right;">Oct 2023 – May 2024</span></h3>
 <ul>
-<li>Designed analytics-driven dashboards to monitor hiring pipelines, SLA adherence, placement velocity, and fulfillment KPIs.</li>
-<li>Applied SQL-style querying, Excel Power Models, and reporting logic to analyze demand forecasting and time-to-hire metrics.</li>
-<li>Partnered with enterprise stakeholders across Aerospace, Defense, IT, and Manufacturing to translate workforce data into insights.</li>
-<li>Improved operational efficiency and placement success rates by 30% through data-backed process optimization.</li>
+<li>Developed analytics-driven dashboards tracking recruitment KPIs, candidate pipelines, and placement rates.</li>
+<li>Applied SQL, Excel, and BI tools to optimize candidate sourcing and time-to-hire, improving SLA compliance.</li>
+<li>Managed enterprise client accounts in Aerospace, Defense, IT, and Manufacturing with actionable workforce insights.</li>
+<li>Streamlined processes to increase placement efficiency by 30%, leveraging database management and ATS systems.</li>
 </ul>
 
-<h3>Production Manager — Tulsi Wire & Wire Nails</h3>
+<h3>Production Manager — Tulsi Wire & Wire Nails <span style="float:right;">Dec 2021 – Sept 2022</span></h3>
 <ul>
-<li>Led data-driven production planning and scheduling, increasing throughput by 25% while maintaining quality standards.</li>
-<li>Analyzed machine utilization, downtime, OEE, and defect trends to reduce operational losses by 20%.</li>
-<li>Implemented lean manufacturing, waste reduction, and continuous improvement initiatives saving ~$50K annually.</li>
-<li>Collaborated on inventory optimization, preventive maintenance planning, and cost control strategies.</li>
+<li>Led production planning and process optimization, boosting throughput by 25% while maintaining quality standards.</li>
+<li>Implemented lean manufacturing and efficiency metrics (OEE) to reduce downtime by 20%.</li>
+<li>Analyzed machine utilization and defect rates to drive cost savings of ~$50K annually.</li>
+<li>Collaborated with cross-functional teams on inventory, maintenance, and operational KPIs.</li>
 </ul>
 </div>
 </section>
@@ -193,9 +201,9 @@ and production KPIs in a smart factory environment.
 <div class="card">
 <h2>Education</h2>
 <ul>
-<li><b>MSc Business Analytics</b> — Technological University of Shannon</li>
-<li><b>MEng Production Engineering & Design</b></li>
-<li><b>BEng Mechanical Engineering</b></li>
+<li><b>Master of Science Business Analytics</b> <span style="float:right;">Sep 2024 – Sep 2025</span><br>Technological University of Shannon</li>
+<li><b>Master of Engineering Production Engineering & Engineering Design</b> <span style="float:right;">Sep 2019 – Jun 2021</span><br>Sagar Institute of Research & Technology</li>
+<li><b>Bachelor of Engineering Mechanical Engineering</b> <span style="float:right;">Jul 2015 – Jun 2019</span><br>Chameli Devi Group of Institutions</li>
 </ul>
 </div>
 </section>
@@ -205,49 +213,13 @@ and production KPIs in a smart factory environment.
 <div class="card">
 <h2>Certifications & Tools</h2>
 <ul>
-<li>SQL • MySQL • Database Management</li>
+<li>SQL & MySQL & Database Management</li>
 <li>Python • Pandas • Streamlit • R</li>
 <li>Advanced Excel • VBA • Power BI</li>
 <li>Operations Analytics • KPI Design • Forecasting</li>
 </ul>
 </div>
 </section>
-
-<!-- CAREER STRATEGY -->
-<section class="section">
-<div class="card">
-<h2>Career Optimization Strategy</h2>
-<ul>
-<li>✔ ATS-optimized resumes (Data Analyst & Operations Analyst)</li>
-<li>✔ LinkedIn profile engineered for recruiter keyword searches</li>
-<li>✔ Portfolio mapped to real-world KPIs & business problems</li>
-</ul>
-</div>
-</section>
-
-<!-- POPUP -->
-<div class="floating-btn" onclick="openPopup()">⭐</div>
-
-<div class="popup" id="popup">
-<div class="popup-content">
-<h2>Recruiter Snapshot</h2>
-<p>
-Roles: Data / Business / Operations Analyst<br>
-Tools: Python, SQL, BI, Streamlit, Excel<br>
-Industries: Tech, Retail, Finance, Manufacturing
-</p>
-<a class="btn" href="#" onclick="closePopup()">Close</a>
-</div>
-</div>
-
-<script>
-function openPopup() {
-    document.getElementById('popup').style.display = 'flex';
-}
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
-</script>
 
 </body>
 </html>
